@@ -30,7 +30,19 @@ const intern_two = {
   "id": 1,
   "name": "Kennan",
   "email": "examples@you.edu",
-  "gender": "M"
+  "gender": "M",
+  speak:function(name){
+    console.log(`Hello, my name is " ${name} !`)
+  }
+}
+const kennan = {
+  "id": 1,
+  "name": "Kennan",
+  "email": "examples@you.edu",
+  "gender": "M",
+  speak:function(name){
+    console.log(`Hello, my name is  ${this.name} !`)
+  }
 }
 
 const intern_three = {
@@ -51,8 +63,21 @@ const intern_five = {
   "id": 4,
   "name": "Antonietta",
   "email": "adaine5@samsung.com",
-  "gender": "F"
+  "gender": "F",
+  multiplyNums:function(a,b){
+    return a * b
+  }
 }
+const antonietta = {
+  "id": 4,
+  "name": "Antonietta",
+  "email": "adaine5@samsung.com",
+  "gender": "F",
+  multiplyNums:function(a,b){
+    return a * b
+  }
+}
+
 
 
 
@@ -73,15 +98,15 @@ console.log(intern_four.name);
 
 // Antonietta's Gender
 
-console.log(intern_five.gender);
+ console.log(intern_five.gender);
 
 
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
-// console.log(kennan.speak());
+ console.log(kennan.speak());
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
-//console.log(antonietta.multiplyNums(3,4));
+console.log(antonietta.multiplyNums(3,4));
 
 // === Great work! === Head over to the the arrays.js file or take a look at the stretch challenge
 
